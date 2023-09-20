@@ -1,0 +1,7 @@
+{% block title %}Упс, ошибочка вышла{% endblock %}
+
+{% block content %}
+  <h1>Упс, ошибочка вышла</h1>
+  <p>Страницы с адресом {{ request.path }} не существует</p>
+  <a href="{% url 'index' %}">Вернуться на главную</a>
+{% endblock %}

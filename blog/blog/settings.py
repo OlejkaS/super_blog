@@ -4,7 +4,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-@ndc=%z(tb5j^^9xu^+@*t1ed%#n@zb8-o$#bor^d*h*2bj!cy'
 
-DEBUG = False
+DEBUG = True
+
+MEDIA_ROOT = BASE_DIR / 'media'
+
+CSRF_FAILURE_VIEW = 'exceptions.views.csrf_failure'
 
 ALLOWED_HOSTS = ['127.0.0.1']
 
@@ -16,7 +20,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_bootstrap5',
-    'feed.apps.FeedConfig'
+    'feed.apps.FeedConfig',
+    'exceptions.apps.ExceptionsConfig'
 ]
 
 MIDDLEWARE = [

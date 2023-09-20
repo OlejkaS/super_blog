@@ -1,7 +1,12 @@
-{% block title %}Упс, ошибочка вышла{% endblock %}
-
-{% block content %}
-  <h1>Упс, ошибочка вышла</h1>
-  <p>Страницы с адресом {{ request.path }} не существует</p>
-  <a href="{% url 'index' %}">Вернуться на главную</a>
-{% endblock %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>404 - Страница не найдена</title>
+</head>
+<body>
+    <h1>Ошибка 404 - Страница не найдена</h1>
+    <p>К сожалению, запрашиваемая страница не найдена.</p>
+    <img src="{% static 'img/404.jpg' %}" alt="Картинка ошибки 404">
+</body>
+</html>
